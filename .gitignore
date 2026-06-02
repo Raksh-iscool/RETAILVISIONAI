@@ -1,18 +1,40 @@
 __pycache__/
 *.pyc
 *.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Databases
 *.db
 *.db-shm
 *.db-wal
-.env
-.venv/
-venv/
+
+# Python packaging
 *.egg-info/
-data/cctv/
-data/pipeline_run.log
-*.zip
-yolov8n.pt
-scripts/__pycache__/
-dist/
 build/
+dist/
+
+# Testing
 .pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+data/pipeline_run.log
+
+# Models
+yolov8n.pt
+
+# CCTV footage (large files)
+data/cctv/
+
+# Archives
+*.zip
