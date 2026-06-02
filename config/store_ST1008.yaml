@@ -80,3 +80,25 @@ camera_zone_ownership:
   CAM_03: [ENTRY_ZONE]
   CAM_04: []   # stockroom — no customer zones
   CAM_05: [BILLING]
+
+# ── BRAND → ZONE MAPPING ──────────────────────────────────────────────────────
+# Maps POS `brand_name` strings to floor zones.
+# Used by attention_vs_sales to reconcile POS revenue with zone dwell.
+# Brand names matched case/whitespace-insensitive (see brand_key()).
+zone_brand_map:
+  MINIMALIST: ["Minimalist", "Be Minimalist"]
+  THE_FACE_SHOP: ["The Face Shop", "TheFaceShop"]
+  GOOD_VIBES: ["Good Vibes"]
+  FACES_CANADA: ["Faces Canada", "FACES CANADA"]
+  LAKME: ["Lakme", "Lakme Absolute", "Lakmé", "Swiss Beauty", "Maybelline"]
+  FOH_COUNTER: ["Round Lab", "DERMDOC", "Plum", "Mamaearth"]
+  NY_BAE: ["NY Bae", "NY BAE"]
+  DERMdoc: ["DERMDOC", "DERMdoc", "Derma Doctor"]
+  # ENTRY_ZONE and BILLING have no associated brand revenue
+
+# ── ZONES WITHOUT CAMERA COVERAGE ─────────────────────────────────────────────
+# Zones listed here have NO live camera feed — dwell data is unavailable.
+# /anomalies must emit COVERAGE_GAP (not DEAD_ZONE) for these.
+zones_without_camera_coverage:
+  - NY_BAE
+  - DERMdoc
