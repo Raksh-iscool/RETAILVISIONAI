@@ -1,4 +1,4 @@
-version: "3.9"
+
 
 services:
   api:
@@ -14,3 +14,4 @@ services:
       - DATA_DIR=/app/data
       - POS_CSV_PATH=/app/data/pos_transactions.csv
     restart: unless-stopped
+

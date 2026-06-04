@@ -1,0 +1,64 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment files
+.env
+.env.*
+
+# Databases (host-only)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Python packaging
+*.egg-info/
+build/
+dist/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+data/pipeline_run.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# YOLO outputs
+runs/
+
+# Large CCTV footage
+data/cctv/
+
+# Archives
+*.zip
+*.tar
+*.gz
+
+# Temporary files
+*.tmp
+*.bak
